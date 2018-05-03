@@ -27,7 +27,7 @@ png("plot04.png", width=480, height=480)
 ggplot(NEI_plot, aes(x=year, y=Emissions)) +
    geom_line(size=1, col="red") +
    geom_point(size=3) +
-   ggtitle("Emissions PM2.5 (tons) from coal combustion-related sources changed from 1999-2008 across the United States") +
+   ggtitle("Emissions PM2.5 (tons) from coal combustion-related sources\nchanged from 1999-2008 across the United States") +
    labs(x="Year",
         y="PM2.5 (tons) Total Emission") +
    ylim(300000, 590000) +

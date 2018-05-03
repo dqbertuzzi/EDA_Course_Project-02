@@ -1,11 +1,9 @@
 
 #--- (5)
 
-setwd("")
-
 # Importing data
-NEI <- readRDS("summarySCC_PM25.rds")
-SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- readRDS("./summarySCC_PM25.rds")
+SCC <- readRDS("./Source_Classification_Code.rds")
 
 # Selecting only motor vehicle sources
 unique(SCC$EI.Sector)

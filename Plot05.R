@@ -35,7 +35,7 @@ png("plot05.png", width=480, height=480)
 ggplot(NEI_plot, aes(x=year, y=Emissions)) +
    geom_line(size=0.8, col="red") +
    geom_point(size=3) +
-   ggtitle("Emissions PM2.5 (tons) from motor vehicle sources changed from 1999-2008 in Baltimore City") +
+   ggtitle("Emissions PM2.5 (tons) from motor vehicle sources\nchanged from 1999-2008 in Baltimore City") +
    labs(x="Year",
         y="PM2.5 (tons) Total Emission") +
    ylim(250, 850) +

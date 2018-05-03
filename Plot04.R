@@ -1,6 +1,6 @@
 options("scipen"=100)
 #--- (4)
-setwd("C:/Users/BertDa01/Desktop/New folder")
+setwd()
 
 # Importing data
 NEI <- readRDS("summarySCC_PM25.rds")

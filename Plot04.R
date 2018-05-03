@@ -1,10 +1,9 @@
 options("scipen"=100)
 #--- (4)
-setwd()
 
 # Importing data
-NEI <- readRDS("summarySCC_PM25.rds")
-SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- readRDS("./summarySCC_PM25.rds")
+SCC <- readRDS("./Source_Classification_Code.rds")
 
 # Selecting only emissions from coal combustion-related sources
 SCC_coal_sel <- grep("coal", SCC$EI.Sector, ignore.case = T)

@@ -1,10 +1,8 @@
 #--- (6)
 
-setwd("")
-
 # Importing data
-NEI <- readRDS("summarySCC_PM25.rds")
-SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- readRDS("./summarySCC_PM25.rds")
+SCC <- readRDS("./Source_Classification_Code.rds")
 
 # Selecting only motor vehicle sources
 SCC_motor_vehicles_sel <- subset(SCC,EI.Sector == "Mobile - On-Road Gasoline Light Duty Vehicles"

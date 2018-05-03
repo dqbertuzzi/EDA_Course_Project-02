@@ -15,7 +15,8 @@ SCC_motor_vehicles_sel <- subset(SCC,EI.Sector == "Mobile - On-Road Gasoline Lig
                                  | EI.Sector == "Mobile - Commercial Marine Vessels"
                                  | EI.Sector == "Mobile - Locomotives")
 
-# Assigning to the dataset NEI_plot observations from Baltimore and Los Angeles County that have emissions from motor vehicle sources\nNEI_data <- NEI[NEI$SCC %in% SCC_motor_vehicles_sel$SCC, ]
+# Assigning to the dataset NEI_plot observations from Baltimore and Los Angeles County that have emissions from motor vehicle sources
+NEI_data <- NEI[NEI$SCC %in% SCC_motor_vehicles_sel$SCC, ]
 NEI_data <- NEI[NEI$fips == "24510" | NEI$fips == "06037", ]
 
 library(dplyr)
@@ -30,7 +31,7 @@ png("plot06.png", width=480, height=480)
 
 ggplot(NEI_plot, aes(x=year, y=Emissions, fill=fips)) +
    geom_bar(position="dodge", stat="identity") +
-   ggtitle("Comparison of emissions PM2.5 (tons) from motor vehicle sources changed from 1999-2008 in Baltimore City and Los Angeles County") +
+   ggtitle("Comparison of emissions PM2.5 (tons) from motor vehicle sources\nchanged from 1999-2008 in Baltimore City and Los Angeles County") +
    labs(x="Year",
         y="PM2.5 (tons) Total Emission",
         fill="Caption") +
